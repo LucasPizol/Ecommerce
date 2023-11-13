@@ -1,0 +1,30 @@
+@import "../../styles/colors.global.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primaryColor;
+}
+.containerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding-right: 5px;
+}
+.search_input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+.nav {
+  display: flex;
+  gap: 25px;
+}
