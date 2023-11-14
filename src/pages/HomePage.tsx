@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import HomeSection from "../components/HomeSection/HomeSection";
 import LineSection from "../components/LineSection/LineSection";
+import ProductsSection from "../components/ProductsSection/ProductsSection";
 import TopPage from "../components/TopPage/TopPage";
 
 const HomePage = () => {
@@ -10,6 +11,7 @@ const HomePage = () => {
       <HomeSection />
       <TopPage />
       <LineSection />
+      <ProductsSection />
     </main>
   );
 };

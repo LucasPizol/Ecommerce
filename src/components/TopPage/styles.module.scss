@@ -18,6 +18,7 @@
   h1 {
     margin-bottom: -20px;
     font-weight: bold;
+    font-family: "Paytone One", "sans-serif";
   }
 }
 .coffeesContainer {
@@ -65,11 +66,12 @@
   text-transform: uppercase;
 }
 .coffeeDescription p {
-  line-height: 0;
   color: #fff;
+  line-height: 1;
 }
 .coffeeDescription p:nth-child(2) {
   font-size: 20px;
+  line-height: 0;
 }
 @media (max-width: 1200px) {
   .coffeesContainer {

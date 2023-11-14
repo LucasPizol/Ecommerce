@@ -1,17 +1,16 @@
-import React from "react";
 import { Container } from "react-bootstrap";
 import { coffees } from "../../api";
 import styles from "./styles.module.scss";
 
-interface Coffee {
+export interface Coffee {
   img: string;
   title: string;
   price: number;
 }
 
-const TopPage = () => {
-  const coffeesOrdered = coffees.sort((a, b) => b.sales - a.sales).slice(0, 3);
+const coffeesOrdered = coffees.sort((a, b) => b.sales - a.sales).slice(0, 3);
 
+const TopPage = () => {
   return (
     <div className={styles.main}>
       <Container className={styles.topContainer}>

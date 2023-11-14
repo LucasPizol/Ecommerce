@@ -1,12 +1,12 @@
 import styles from "./styles.module.scss";
-import { Container, Button } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 const HomeSection = () => {
   return (
     <main
       className={styles.main}
       style={{
         background:
-          "linear-gradient(#ffffff00, #000000dd), url(public/img_wallpaper.webp)",
+          "linear-gradient(#ffffff00, #000000dd), url(/img_wallpaper.webp)",
         backgroundSize: "cover",
         backgroundPosition: "70%",
       }}

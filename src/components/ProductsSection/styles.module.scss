@@ -1,0 +1,23 @@
+@import "../../styles/colors.global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+.productsSection {
+  position: relative;
+  background-color: #fff;
+  h1 {
+    text-align: center;
+    padding-top: 60px;
+    font-weight: bold;
+    color: $primaryColor;
+    font-family: "Paytone One", "sans-serif";
+  }
+}
+
+.productsContainer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 30px;
+  padding-bottom: 60px;
+  padding-top: 20px;
+}
