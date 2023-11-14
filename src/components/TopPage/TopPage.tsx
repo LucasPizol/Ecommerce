@@ -10,17 +10,19 @@ interface Coffee {
 }
 
 const TopPage = () => {
+  const coffeesOrdered = coffees.sort((a, b) => b.sales - a.sales).slice(0, 3);
+
   return (
     <div className={styles.main}>
       <Container className={styles.topContainer}>
         <h1 className={styles.title}>BEST SELLERS</h1>
         <div className={styles.coffeesContainer}>
-          {coffees.map((coffee: Coffee) => (
+          {coffeesOrdered.map((coffee: Coffee) => (
             <div
               style={{
                 background: `linear-gradient(#ffffff00, #000000dd),url(${coffee.img})`,
                 backgroundSize: "cover",
-                backgroundPosition:"center"
+                backgroundPosition: "center",
               }}
               className={styles.coffee}
             >

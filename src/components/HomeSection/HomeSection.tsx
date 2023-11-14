@@ -6,9 +6,9 @@ const HomeSection = () => {
       className={styles.main}
       style={{
         background:
-          "linear-gradient(#ffffff00, #000000dd), url(public/img_wallpaper.jpg)",
+          "linear-gradient(#ffffff00, #000000dd), url(public/img_wallpaper.webp)",
         backgroundSize: "cover",
-        backgroundPosition:"70%"
+        backgroundPosition: "70%",
       }}
     >
       <Container className={styles.text}>

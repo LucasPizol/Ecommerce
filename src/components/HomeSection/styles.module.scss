@@ -33,8 +33,8 @@
 .subtitle {
   color: #fff;
   font-size: 25px;
-  line-height: 0;
-  margin-top: 25px;
+  line-height: 1.3;
+  margin-top: 10px;
 }
 .overlay {
   position: absolute;
@@ -47,49 +47,70 @@
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-top: 30px;
-}
-.buttons button:nth-child(1) {
-  background-color: $primaryColor;
-  border: 1px solid $primaryColor;
-  color: #fff;
-  font-size: 18px;
-  transition: 0.4s;
-  &:hover {
-    background-color: #8a541e;
-    border-color: #8a541e;
+  margin-top: 10px;
+  button {
+    padding: 8px 15px;
   }
-}
-.buttons button {
-  padding: 8px 15px;
-}
 
-.buttons button:nth-child(2) {
-  border: 1px solid white;
-  background-color: transparent;
-  color: #fff;
-  transition: 0.4s;
-  &:hover {
-    background-color: #fff;
-    color: black;
+  button:nth-child(1) {
+    background-color: $primaryColor;
+    border: 1px solid $primaryColor;
+    color: #fff;
+    transition: 0.4s;
+    &:hover {
+      background-color: #8a541e;
+      border-color: #8a541e;
+    }
+  }
+
+  button:nth-child(2) {
+    border: 1px solid white;
+    background-color: transparent;
+    color: #fff;
+    transition: 0.4s;
+    &:hover {
+      background-color: #fff;
+      color: black;
+    }
   }
 }
 .color {
   color: #cd8c42;
   font-family: "Paytone One", sans-serif;
 }
-@media(max-width: 993px) {
+@media (max-width: 993px) {
   .title {
     font-size: 60px;
   }
 }
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .title {
     text-align: center;
     font-size: 50px;
   }
-  .subtitle{
+  .subtitle {
     font-size: 20px;
     text-align: center;
+  }
+  .buttons {
+    align-items: center;
+    justify-content: center;
+    button {
+      font-size: 18px;
+      padding: 4px 10px;
+    }
+  }
+}
+@media (max-width: 495px) {
+  .title {
+    font-size: 9vw;
+  }
+  .subtitle {
+    font-size: 5vw;
+  }
+  .buttons {
+    button {
+      font-size: 15px;
+    }
   }
 }

@@ -2,7 +2,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  background-color: #f0dbb2;
+  background-color: #5e421c;
   //   background: url("public/secondary-background.webp");
   //   background-repeat: no-repeat;
   //   background-size: cover;
@@ -24,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 80px;
   width: 100%;
 }
@@ -33,6 +34,7 @@
 }
 .coffee {
   flex: 1;
+  min-width: 215px;
   overflow: hidden;
   position: relative;
   height: 400px;
@@ -68,4 +70,19 @@
 }
 .coffeeDescription p:nth-child(2) {
   font-size: 20px;
+}
+@media (max-width: 1200px) {
+  .coffeesContainer {
+    gap: 30px;
+  }
+}
+@media (max-width: 993px) {
+  .coffeesContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+  .coffeeDescription {
+    p:nth-child(1) {
+      font-size: 20px;
+    }
+  }
 }
