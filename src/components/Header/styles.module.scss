@@ -4,25 +4,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: $primaryColor;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  transition: 0.5s;
 }
 .containerHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0px;
+  padding: 14px 0px;
 }
 .search {
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 7px;
   padding-right: 5px;
+  padding-left: 10px;
+  ::placeholder {
+    color: #ffffffc7;
+  }
 }
 .search_input {
   background: none;
   border: none;
   outline: none;
   padding: 5px;
+  color: #fff;
+
 }
 .nav {
   display: flex;
