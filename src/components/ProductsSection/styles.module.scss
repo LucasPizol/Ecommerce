@@ -3,7 +3,7 @@
 
 .productsSection {
   position: relative;
-  background-color: #fff;
+  background-color: #e8d0b5;
   h1 {
     text-align: center;
     padding-top: 60px;
@@ -16,7 +16,8 @@
 .productsContainer {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: max-content;
   gap: 30px;
   padding-bottom: 60px;
   padding-top: 20px;

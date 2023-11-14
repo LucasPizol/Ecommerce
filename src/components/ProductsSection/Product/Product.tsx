@@ -9,7 +9,7 @@ interface Props {
 const Product = ({ coffee }: Props) => {
   return (
     <div className={styles.product}>
-      <img src={coffee.img} alt={coffee.title} />
+      <img src={coffee.img} alt={coffee.title} loading="lazy" />
       <div className={styles.productDescription}>
         <p>{coffee.title}</p>
         <p>
@@ -18,10 +18,10 @@ const Product = ({ coffee }: Props) => {
             currency: "BRL",
           })}
         </p>
+        <button>
+          CARRINHO <MdShoppingCart />
+        </button>
       </div>
-      <button>
-        CARRINHO <MdShoppingCart />
-      </button>
     </div>
   );
 };

@@ -10,8 +10,8 @@ const HomePage = () => {
       <Header />
       <HomeSection />
       <TopPage />
-      <LineSection />
       <ProductsSection />
+      <LineSection />
     </main>
   );
 };
