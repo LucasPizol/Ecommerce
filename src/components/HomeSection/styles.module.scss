@@ -78,3 +78,18 @@
   color: #cd8c42;
   font-family: "Paytone One", sans-serif;
 }
+@media(max-width: 993px) {
+  .title {
+    font-size: 60px;
+  }
+}
+@media(max-width: 768px) {
+  .title {
+    text-align: center;
+    font-size: 50px;
+  }
+  .subtitle{
+    font-size: 20px;
+    text-align: center;
+  }
+}

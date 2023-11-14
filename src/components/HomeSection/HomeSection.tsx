@@ -2,11 +2,15 @@ import styles from "./styles.module.scss";
 import { Container, Button } from "react-bootstrap";
 const HomeSection = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.imageDiv}>
-        <img src="public/img_wallpaper.jpg" className={styles.image} />
-        <div className={styles.overlay}></div>
-      </div>
+    <main
+      className={styles.main}
+      style={{
+        background:
+          "linear-gradient(#ffffff00, #000000dd), url(public/img_wallpaper.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition:"70%"
+      }}
+    >
       <Container className={styles.text}>
         <h1 className={styles.title}>
           EXPERIMENTE <br />A NOVA{" "}
