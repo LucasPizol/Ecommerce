@@ -1,19 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Paytone+One&display=swap");
 @import "./styles/colors.global.scss";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Manrope", "sans-serif";
+  font-family: "Montserrat", "sans-serif";
 }
 ::-webkit-scrollbar {
   width: 11px;
-  
 } /* webkit browsers(safari, chrome) */
 ::-webkit-scrollbar-thumb {
   background-color: $primaryColor;
   width: 20px;
-  border:2px solid white;
+  border: 2px solid white;
   border-radius: 10px;
   height: 100px;
   display: block;

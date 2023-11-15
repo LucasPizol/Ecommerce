@@ -1,0 +1,120 @@
+@import "../../styles/colors.global.scss";
+
+.createYours {
+  background-color: #e8d0b5;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  height: 90vh;
+}
+
+.createYoursGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+}
+.createYoursTitle {
+  font-family: $titleFont;
+  text-align: center;
+  margin-bottom: 20px;
+  color: $primaryColor;
+}
+
+.createYoursFormDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  gap: 20px;
+}
+
+.imageDiv {
+  height: 100%;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.divHide {
+  animation: move_wave linear 3s infinite;
+  position: absolute;
+  transition: 0.5s;
+  top: 0;
+  width: 200%;
+  background: #e8d0b5;
+  overflow: hidden;
+  --mask: radial-gradient(
+        67.08px at 50% calc(100% - 90px),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 60px) 0/120px 100%,
+    radial-gradient(67.08px at 50% calc(100% + 60px), #0000 99%, #000 101%) 50%
+      calc(100% - 30px) / 120px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+.imageOutline {
+  position: absolute;
+  height: 100%;
+  bottom: 0;
+  width: 100%;
+}
+.image {
+  width: 100%;
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+  transition: 0.5s;
+}
+
+.form {
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  flex: 2;
+
+  div {
+    width: 100%;
+    label {
+      font-weight: bold;
+      color: $primaryColor;
+    }
+    select {
+      background-color: transparent;
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      font-weight: bold;
+      width: 100%;
+      option {
+        width: 100%;
+        background-color: #e8d0b5;
+        padding: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  :disabled {
+    background-color: #a78560;
+  }
+}
+
+@keyframes move_wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-49%);
+  }
+}
+
+@media (max-width: 992px) {
+  .form {
+    flex: 1;
+  }
+}

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import "../../styles/colors.global.scss";
 
 .bestCoffee {
   width: 100%;
@@ -6,13 +6,13 @@
   padding: 90px 0px;
   h1 {
     color: #fff;
-    font-family: "Paytone One", "sans-serif";
+    font-family: $titleFont;
     text-align: center;
     font-size: 60px;
     line-height: 0.8;
     span {
       color: #e4b50c;
-      font-family: "Paytone One", "sans-serif";
+      font-family: $titleFont;
       font-size: 110px;
     }
   }
