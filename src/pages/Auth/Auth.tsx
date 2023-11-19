@@ -2,12 +2,33 @@ import { Container } from "react-bootstrap";
 import LoginForm, { Fields } from "../../components/AuthPage/LoginForm/LoginForm";
 import styles from "./styles.module.scss";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const getUser = async (token: string) => {
+  const res = await fetch("http://localhost:3000/user", {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  });
+  const data = await res.json();
+  return data;
+};
 
 const Auth = () => {
   const [toast, setToast] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = sessionStorage.getItem("coffe-shop-token");
+    if (token) {
+      getUser(token).then((user) => {
+        if (user.user) {
+          navigate("/");
+        }
+      });
+    }
+  }, []);
 
   const login = async (e: any, fields: Fields) => {
     e.preventDefault();
@@ -42,7 +63,7 @@ const Auth = () => {
   return (
     <main className={styles.main}>
       <Container className={styles.container}>
-        <img src="/login_picture.jpg" className={styles.loginPicture} />
+        <img src="/login_picture.webp" className={styles.loginPicture} />
         <div className={styles.loginSide}>
           <div>
             <p>Boas vindas ao</p>

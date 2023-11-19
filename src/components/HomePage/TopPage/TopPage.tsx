@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
-import { coffees } from "../../../api";
 import styles from "./styles.module.scss";
+import Loading from "../../Loading";
 
 export interface Coffee {
   img: string;
@@ -8,28 +8,37 @@ export interface Coffee {
   price: number;
 }
 
-const coffeesOrdered = coffees.sort((a, b) => b.sales - a.sales).slice(0, 3);
+interface Props {
+  data: any;
+}
 
-const TopPage = () => {
+const TopPage = ({ data }: Props) => {
+  const coffeesOrdered = data?.products?.sort((a: any, b: any) => b.sales - a.sales).slice(0, 3);
+
   return (
     <div className={styles.main}>
       <Container className={styles.topContainer}>
         <h1 className={styles.title}>Best Sellers</h1>
         <div className={styles.coffeesContainer}>
-          {coffeesOrdered.map((coffee: Coffee) => (
-            <div className={styles.coffee}>
-              <img className={styles.coffeeImg} src={coffee.img} />
-              <div className={styles.coffeeDescription}>
-                <p>{coffee.title}</p>
-                <p>
-                  Por apenas: {coffee?.price?.toLocaleString("pt-br", {
-                    style: "currency",
-                    currency: "BRL",
-                  })}
-                </p>
+          {!data ? (
+            <Loading />
+          ) : (
+            coffeesOrdered?.map((coffee: any) => (
+              <div key={coffee.id} className={styles.coffee}>
+                <img className={styles.coffeeImg} src={coffee.images[0]} />
+                <div className={styles.coffeeDescription}>
+                  <p>{coffee.name}</p>
+                  <p>
+                    Por apenas:{" "}
+                    {(coffee?.default_price.unit_amount / 100)?.toLocaleString("pt-br", {
+                      style: "currency",
+                      currency: "BRL",
+                    })}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </Container>
     </div>

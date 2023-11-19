@@ -20,7 +20,7 @@ const HomePage = () => {
     <main style={{ overflow: "overlay" }}>
       <Header />
       <HomeSection />
-      <TopPage />
+      <TopPage data={data}/>
       <ProductsSection data={data} />
       <LineSection />
       <CreateYours />
