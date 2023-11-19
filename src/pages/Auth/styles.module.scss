@@ -1,0 +1,72 @@
+@import "../../styles/colors.global.scss";
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-color: $backColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+.loginPicture {
+  flex: 1;
+  width: 100%;
+  height: 95%;
+  object-fit: cover;
+}
+.loginSide {
+  flex: 1;
+  background-color: #fff;
+  height: 100%;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+
+  box-shadow: -20px 0px 25px 0px rgba(0, 0, 0, 0.384);
+  p:nth-child(1) {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  h1 {
+    font-family: $titleFont;
+    font-size: 80px;
+    color: $primaryColor;
+  }
+}
+.register {
+  font-size: 11px;
+  color: #aaa;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error {
+  position: absolute;
+  background-color: rgb(255, 101, 101);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  color: white;
+  font-weight: bold;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  right: 0;
+  top: 250px;
+  box-shadow: 1px 2px 0px 1px black;
+  p {
+    padding: 15px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../styles/colors.global.scss";
+
+.bestCoffee {
+  width: 100%;
+  background-color: #e8d0b5;
+  padding: 90px 0px;
+  h1 {
+    color: $primaryColor;
+    font-family: "Bakbak One", sans-serif;
+    text-align: center;
+    font-size: 60px;
+    line-height: 0.8;
+    span {
+      color: $secondaryColor;
+      font-family: "Bakbak One", sans-serif;
+      font-size: 110px;
+    }
+  }
+}
+@media (max-width: 410px) {
+  .bestCoffee {
+    h1 {
+      font-size: 15vw;
+      span {
+        font-size: 25vw;
+      }
+    }
+  }
+}

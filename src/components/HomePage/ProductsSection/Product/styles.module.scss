@@ -1,0 +1,62 @@
+@import "../../../../styles/colors.global.scss";
+
+.product {
+  background: linear-gradient(to bottom, transparent 20%, white 20%);
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  min-width: 250px;
+  gap: 6px;
+  flex: none;
+  transition: 0.3s;
+  img {
+    object-fit: cover;
+    height: 180px;
+    width: 90%;
+    aspect-ratio: 1/1;
+  }
+  button {
+    background-color: transparent;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border: none;
+    justify-content: center;
+    background-color: $secondaryColor;
+    color: white;
+    font-size: 16px;
+    padding: 4px;
+  }
+}
+
+.productDescription {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  p:nth-child(1) {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  p {
+    line-height: 1;
+    color: #000;
+    text-align: center;
+  }
+}
+
+@media(max-width: 763px) {
+  .product {
+    width:100%;
+    min-width: 0;
+  }
+}

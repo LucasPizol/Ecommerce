@@ -1,0 +1,108 @@
+@import "../../../styles/colors.global.scss";
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8d0b5;
+  //   background: url("public/secondary-background.webp");
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: 50%;
+}
+.topContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  flex-direction: column;
+  h1 {
+    margin-bottom: 70px;
+    font-weight: bold;
+    font-family: $titleFont;
+    font-size: 65px;
+  }
+}
+.coffeesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  width: 100%;
+}
+.title {
+  color: $primaryColor;
+  font-weight: bold;
+}
+.coffee {
+  flex: 1;
+  min-width: 215px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: center;
+  align-items: center;
+  background-size: cover;
+  background: linear-gradient(to bottom, transparent 20%, white 20%);
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.coffeeImg {
+  width: 90%;
+  min-height: 260px;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.coffeeDescription {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 10px 20px;
+  height: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+  gap: 10px;
+}
+
+.coffeeDescription p {
+  text-align: center;
+  line-height: 1;
+}
+.coffeeDescription p:nth-child(1) {
+  font-size: 27px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $secondaryColor;
+  height: 30px;
+}
+.coffeeDescription p:nth-child(2) {
+  font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+  .coffeesContainer {
+    gap: 30px;
+  }
+}
+@media (max-width: 993px) {
+  .coffeeDescription {
+    p:nth-child(1) {
+      font-size: 20px;
+    }
+  }
+}
+@media(max-width: 440px) {
+  .coffeesContainer{
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: auto;
+    width: 103%;
+  }
+}

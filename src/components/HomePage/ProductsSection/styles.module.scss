@@ -1,0 +1,81 @@
+@import "../../../styles/colors.global.scss";
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+.productsSection {
+  position: relative;
+  background-color: #e8d0b5;
+
+  h1 {
+    text-align: center;
+    padding-top: 90px;
+    font-weight: bold;
+    color: $primaryColor;
+    font-family: $titleFont;
+    font-size: 60px;
+  }
+}
+
+.productsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-bottom: 60px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.configButton {
+  z-index: 99;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $secondaryColor;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  position: absolute;
+}
+
+.nextButton {
+  @extend .configButton;
+  right: 0;
+  z-index: 99;
+  margin-right: 100px;
+}
+
+.previousButton {
+  @extend .configButton;
+  left: 0;
+  z-index: 99;
+  margin-left: 100px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  flex: none;
+  overflow: scroll;
+  transition: 0.5s;
+  scroll-behavior: smooth;
+  width: 100%;
+  position: relative;
+  gap: 30px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carouselChange {
+  position: absolute;
+}
+@media(max-width: 763px) {
+  .carousel {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  }
+}
