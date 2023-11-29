@@ -12,7 +12,7 @@ const Product = ({ coffee }: Props) => {
     const token = sessionStorage.getItem("coffe-shop-token");
 
     if (!token) {
-      navigate("/login");
+      navigate("/auth");
       return;
     }
 

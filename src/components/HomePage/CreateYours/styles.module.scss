@@ -37,11 +37,11 @@
   max-width: 300px;
 }
 .divHide {
-  animation: move_wave linear 3s infinite;
+  animation: move_wave linear 10s infinite;
   position: absolute;
   transition: 0.5s;
   top: 0;
-  width: 200%;
+  width: 100vw;
   background: #e8d0b5;
   overflow: hidden;
   --mask: radial-gradient(67.08px at 50% calc(100% - 90px), #000 99%, #0000 101%) calc(50% - 60px) 0/120px 100%,
@@ -86,9 +86,11 @@
       color: $primaryColor;
       font-weight: bold;
       width: 100%;
-      &:hover, &:active, &:focus{
+      &:hover,
+      &:active,
+      &:focus {
         box-shadow: none;
-        border-color: $primaryColor
+        border-color: $primaryColor;
       }
       option {
         width: 100%;
@@ -99,8 +101,31 @@
     }
   }
 
-  :disabled {
+  select:disabled {
     background-color: #a78560;
+  }
+
+  button {
+    padding: 7px;
+    width: 30%;
+    align-self: flex-end;
+    background-color: $primaryColor;
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 0px 1px black;
+    transition: 0.3s;
+    margin-top: 10px;
+    &:not(:disabled):hover {
+      box-shadow: 1px 1px 0px 1px black;
+      transform: translateX(1px) translateY(1px);
+      background-color: #3b2e0d;
+    }
+
+    &:disabled {
+      background-color: #867d67;
+      color: rgb(37, 37, 37);
+    }
   }
 }
 
@@ -108,8 +133,9 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-49%);
+    transform: translateX(-50%);
   }
 }
 
@@ -118,8 +144,8 @@
     flex: 1;
   }
 }
-@media(max-width: 763px) {
-  .createYoursFormDiv{
+@media (max-width: 763px) {
+  .createYoursFormDiv {
     flex-direction: column-reverse;
   }
 }
